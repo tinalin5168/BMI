@@ -32,6 +32,8 @@ if st.button('點我>>>BMI計算'):
         st.write('嗨~正妹,你的BMI正常,身材適中~~請加油努力往水蛇腰邁進喔~')
     elif a <25 and waist <25 and gender=='女性':
         st.write('嗨~正妹,你的BMI正常,身材也不錯喔~')
+    elif a >=25 and waist <25:
+        st.write('胖子注意,你擁有',waist,'腰太細,BMI太大異常,快快減肥去!')
     else:
         st.write('嗨~帥哥,你的BMI正常~身材也不錯喔')
 #option = st.selectbox(
