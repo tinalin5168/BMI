@@ -1,13 +1,13 @@
 #streamlit run BMI_web.py
 import streamlit as st
 st.header(' **_BMI計算_**.:sunglasses:')
-h = st.number_input('請輸入身高(cm):',value=160,step=5)
-w = st.number_input('請輸入體重(kg):',value=60,step=5)
+h = st.number_input('請輸入身高(cm):',value=160,step=3)
+w = st.number_input('請輸入體重(kg):',value=60,step=3)
 #waist = st.number_input('請輸入腰圍(cm):',value=30,step=5)
 gender = st.radio('', ('男性', '女性'))
 waist = st.slider('腰圍(吋):', 10, 120, 20)
 #gender=st.selectbox('',('男性', '女性'))
-st.write('你的性別是:',gender)                    
+#st.write('你的性別是:',gender)                    
 if st.button('點我>>>BMI計算'):
     
     BMI = w / (h/100) ** 2
@@ -24,7 +24,7 @@ if st.button('點我>>>BMI計算'):
         st.write('嗨~man~你擁有',waist,'的腰身還算正常,但是BMI偏高異常,飲食該節制了~快點運動運動')  
     elif a >25 and 25<=waist <35 and gender=='女性':
         st.write('嗨~正妹~你擁有',waist,'的腰身頗粗,但是BMI偏高異常,飲食該節制了~快點運動運動') 
-    elif a <25 and waist >50:
+    elif a <25 and waist >38:
         st.write('嗨~BMI正常,但是腰圍',waist,'腰很粗趕快起來扭腰運動')
     elif a <25 and 25<=waist <35 and gender=='男性':
         st.write('嗨~man,你的BMI正常,身材適中,好好維持喔')
