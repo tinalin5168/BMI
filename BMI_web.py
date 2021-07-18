@@ -16,9 +16,9 @@ if st.button('點我>>>BMI計算'):
     a=BMI
     if a >30 and waist >50:
         st.write('胖子注意,你擁有',waist,'的水桶腰,BMI太大異常,快快減肥去!')
-    elif a >25 and waist >40 and gender=='男性':
+    elif a >25 and waist >=35 and gender=='男性':
         st.write('嗨~man~你擁有',waist,'的腰身,BMI偏高異常,飲食該節制了~快點運動運動')
-    elif a >25 and waist >35 and gender=='女性':
+    elif a >25 and waist >=35 and gender=='女性':
         st.write('嗨~美女~你擁有',waist,'的腰身,BMI偏高異常,飲食該節制了~快點運動運動')
     elif a >25 and 25<=waist <35 and gender=='男性':
         st.write('嗨~man~你擁有',waist,'的腰身還算正常,但是BMI偏高異常,飲食該節制了~快點運動運動')  
